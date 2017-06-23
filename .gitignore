@@ -1,0 +1,6 @@
+# Include just configuration from build directory
+/build/*
+!/build/conf
+# local.conf is symlink to a tracked file
+/build/conf/local.conf
+/build/conf/sanity_info
