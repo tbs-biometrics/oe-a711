@@ -226,3 +226,12 @@ INHERIT += "own-mirrors"
 SOURCE_MIRROR_URL = "http://dulik64.local.tbs-biometrics.cz/oe_dl/"
 
 DISTRO ?= "tbs-a711"
+
+# I have ramdisk for a few dirs inside $TMPDIR, so add some of them to the monitoring
+BB_DISKMON_DIRS += "\
+    STOPTASKS,${BASE_WORKDIR},1G,100K \
+    STOPTASKS,${STAGING_KERNEL_DIR},1G,100K \
+    STOPTASKS,${STAMPS_DIR},1G,100K \
+    ABORT,${BASE_WORKDIR},100M,1K \
+    ABORT,${STAGING_KERNEL_DIR},100M,1K \
+    ABORT,${STAMPS_DIR},100M,1K"
