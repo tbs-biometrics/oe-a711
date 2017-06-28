@@ -225,4 +225,4 @@ BUILDHISTORY_COMMIT = "1"
 INHERIT += "own-mirrors"
 SOURCE_MIRROR_URL = "http://dulik64.local.tbs-biometrics.cz/oe_dl/"
 
-DISTRO = "tbs-a711"
+DISTRO ?= "tbs-a711"
